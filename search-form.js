@@ -177,7 +177,6 @@ class SearchForm extends HTMLElement {
 
 
     ulElem.onclick = function (event) {
-      console.log('this in ulElem:', ulElem)
       ulElem.classList.add('hide_results')
       const choosenCompanyName = event.target.innerText;
       autocomplete.value = choosenCompanyName;
@@ -210,9 +209,7 @@ class SearchForm extends HTMLElement {
       return responseJson
     }
 
-    catch(e){
-      console.log('e:', e)
-    }
+    catch(e){}
   }
 
   static globalResult = null;
